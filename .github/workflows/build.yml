@@ -25,6 +25,6 @@ jobs:
 
       - name: Read manifest
         id: deploy
-        uses: digital-ai/github-actions-deploy@main
+        uses: digital-ai/github-actions-deploy@test
         with:
           manifestPath: deployit-manifest.xml
