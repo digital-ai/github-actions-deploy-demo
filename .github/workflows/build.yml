@@ -22,3 +22,9 @@ jobs:
       - name: Build with Gradle
         id: build
         run: ./gradlew build --no-daemon --console=plain
+
+      - name: Read manifest
+        id: deploy
+        uses: digital-ai/github-actions-deploy@main
+        with:
+          manifestPath: deployit-manifest.xml
