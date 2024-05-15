@@ -27,4 +27,9 @@ jobs:
         id: deploy
         uses: digital-ai/github-actions-deploy@test
         with:
-          manifestPath: deployit-manifest.xml
+          serverUrl: ${{ secrets.SERVERURL }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          manifestPath: 'deployit-manifest.xml'
+          action: 'create_publish'
+          darPath: 'output'
