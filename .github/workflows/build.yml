@@ -32,4 +32,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           manifestPath: 'deployit-manifest.xml'
           action: 'create_publish'
-          darPath: 'output'
+          outputPath: 'output'
+          versionNumber: '2.0'
+          packageName: 'mydar'
