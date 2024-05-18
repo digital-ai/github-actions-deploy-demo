@@ -30,9 +30,9 @@ jobs:
           serverUrl: ${{ secrets.SERVERURL }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          manifestPath: 'deployit-manifest.xml'
+          manifestPath: '/deployit-manifest.xml'
           action: 'create_publish_deploy'
-          outputPath: 'outputdar'
+          outputPath: '/outputdar'
           versionNumber: ${{ vars.VERSIONNUMBER }}
           packageName: 'appForAction-1.0.dar'
           environmentId: 'Environments/envForAction'
