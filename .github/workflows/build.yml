@@ -1,4 +1,4 @@
-name: Build Java Project with Gradle
+name: Build and Deploy
 
 on: [workflow_dispatch]
 
