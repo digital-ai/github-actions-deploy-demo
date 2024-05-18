@@ -23,7 +23,7 @@ jobs:
         id: build
         run: ./gradlew build --no-daemon --console=plain
 
-      - name: Read manifest
+      - name: Create Publish and Deploy Package
         id: deploy
         uses: digital-ai/github-actions-deploy@test
         with:
@@ -31,7 +31,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           manifestPath: 'deployit-manifest.xml'
-          action: 'create_publish'
-          outputPath: 'output'
-          versionNumber: '2.0'
-          packageName: 'mydar'
+          action: 'create_publish_deploy'
+          outputPath: 'outputdar'
+          versionNumber: '1.0'
+          packageName: 'appForAction-1.0.dar'
+          environmentId: 'Environments/envForAction'
+          rollback: 'yes'
