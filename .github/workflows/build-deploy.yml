@@ -25,13 +25,13 @@ jobs:
 
       - name: Create Publish and Deploy Package
         id: deploy
-        uses: digital-ai/github-actions-deploy@v1.0.0
+        uses: digital-ai/github-actions-deploy@D-227999
         with:
           serverUrl: ${{ secrets.SERVERURL }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           manifestPath: '/deployit-manifest-1.xml'
-          action: 'create_publish_deploy'
+          action: 'create_publish'
           outputPath: '/outputdar'
           versionNumber: ${{ vars.VERSIONNUMBER }}
           packageName: 'appForAction-1.0.dar'
