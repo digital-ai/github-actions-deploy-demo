@@ -27,7 +27,7 @@ jobs:
         id: deploy
         uses: digital-ai/github-actions-deploy@D-227999
         with:
-          serverUrl: ${{ secrets.SERVERURL }}
+          serverUrl: ${{ vars.SERVERURL }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           manifestPath: '/deployit-manifest-1.xml'
