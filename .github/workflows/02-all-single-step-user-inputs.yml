@@ -1,4 +1,4 @@
-name: 02 All single step - user inputs
+﻿name: 02 All single step - user inputs
 
 on:
   workflow_dispatch:
@@ -37,12 +37,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
-          distribution: 'adopt'
+          distribution: 'temurin'
           java-version: '17'
 
       - name: Grant execute permissions to gradlew
@@ -54,7 +54,7 @@ jobs:
 
       - name: Create, Publish, and Deploy Package
         id: deploy
-        uses: digital-ai/github-actions-deploy@S-134199
+        uses: digital-ai/github-actions-deploy@v5.0.0
         with:
           serverUrl:     ${{ vars.SERVERURL }}
           username:      ${{ secrets.USERNAME }}

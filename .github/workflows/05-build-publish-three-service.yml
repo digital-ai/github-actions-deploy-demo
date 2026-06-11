@@ -1,4 +1,4 @@
-name: 05 Multiple manifests - direct values
+﻿name: 05 Multiple manifests - direct values
 
 'on':
   - workflow_dispatch
@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
-          distribution: adopt
+          distribution: temurin
           java-version: '17'
 
       - name: Grant execute permissions to gradlew
@@ -25,7 +25,7 @@ jobs:
 
       - name: Create and Publish - Service 1
         id: service1
-        uses: digital-ai/github-actions-deploy@S-134199
+        uses: digital-ai/github-actions-deploy@v5.0.0
         with:
           serverUrl: '${{ vars.SERVERURL }}'
           username: '${{ secrets.USERNAME }}'
@@ -43,7 +43,7 @@ jobs:
 
       - name: Create and Publish - Service 2
         id: service2
-        uses: digital-ai/github-actions-deploy@S-134199
+        uses: digital-ai/github-actions-deploy@v5.0.0
         with:
           serverUrl: '${{ vars.SERVERURL }}'
           username: '${{ secrets.USERNAME }}'
@@ -61,7 +61,7 @@ jobs:
 
       - name: Create and Publish - Service 3
         id: service3
-        uses: digital-ai/github-actions-deploy@S-134199
+        uses: digital-ai/github-actions-deploy@v5.0.0
         with:
           serverUrl: '${{ vars.SERVERURL }}'
           username: '${{ secrets.USERNAME }}'
